@@ -6,7 +6,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
 
-  socket = io.connect('http://localhost:3000');
+  //socket = io.connect('http://localhost:3000');
+  socket = io.connect(window.location.hostname);
   socket.on('mouse', newDrawing);
 
   var vectors = [];
